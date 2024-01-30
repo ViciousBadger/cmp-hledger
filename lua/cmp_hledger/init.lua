@@ -67,7 +67,7 @@ source.complete = function(self, request, callback)
     callback()
     return
   end
-  local account_path = vim.api.findfile('.hledger.journal', '.;')
+  local account_path = vim.fn.findfile('.hledger.journal', '.;')
   -- local account_path = vim.api.nvim_buf_get_name(0)
   if not self.items then
     self.items = get_items(account_path)
